@@ -15,7 +15,7 @@ console.log(`abcdefg ${x} hisdivdsvvoiv ${s} `);
 
 // Methods
 
-const ns = game.substring(0, 4);
+const ns = game.substring(0, 4); // particular key length selected to print
 const vs = game.slice(-8, 6); // in this we also take negative value
 
 const trim = game.trim();
