@@ -19,4 +19,4 @@ console.table([name, age, id, password]);
 multiple line comment
 */
 
-// we use let instead of var as it is a functional scope / globally scope
+// we use let(block scope) instead of var(functional scope / globally scope)

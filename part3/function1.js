@@ -11,7 +11,7 @@ console.log("the value is :", store);
 
 function neww(username) {
   if (!username) {
-    // username = "dv" , so it will ignore the if condition
+    //   (username = "dv"),  so it will ignore the if condition
     console.log("Please enter a username");
     return;
   }

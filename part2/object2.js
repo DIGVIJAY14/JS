@@ -39,4 +39,4 @@ console.log(Object.entries(obj1));
 // to check the existance property
 
 console.log(obj2.hasOwnProperty("1"));
-console.log(obj2.hasOwnProperty("3"));
+console.log(obj2.hasOwnProperty("3")); // for keys
