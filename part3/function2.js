@@ -32,7 +32,8 @@ works(obj);
 const arrays = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
 function checks(parameter) {
-  return parameter[4];
+  return parameter[5];
+  // return parameter;
 }
 
 console.log(checks(arrays));

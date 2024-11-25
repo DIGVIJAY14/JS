@@ -11,7 +11,7 @@ const arr = ["x", "y", "z"];
 
 let myarray = 0;
 while (myarray <= arr.length) {
-  // array indexing is equals to 'length - 1'(length of array), as indexing starts from '0' and length starts from coz it counts the number of elements in array
+  // array indexing is equals to 'length - 1'(length of array), as indexing starts from '0' and length starts from coz it counts the number of elements in array..10
 
   // That's why if we use '<=' then one more value will print as it's length is three but in array the last index is 2, so there is no value in last , so it will print undefined..
 
