@@ -6,13 +6,57 @@
 </head>
 <body>
     <div class="bg-black">
-        <h1 class="heading">HEY!! EVERYONE</h1>
+        <h1 id="new" class="heading">HEY!! EVERYONE</h1>
         <p>Call back function :- A callback function is used to fetch or perform operations only when needed</p>
+        <p>Call back function :- A callback function is used to fetch or perform operations only when needed</p>
+        <p>Call back function :- A callback function is used to fetch or perform operations only when needed</p>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+    <div class="par">
+        <div class="parts1">mon</div>
+        <div class="parts2">tue</div>
+        <div class="parts3">wed</div>
+        <div class="parts4">thu</div>
     </div>
 </body>
+<script>
+  const qq = document.querySelector('.par')
+    console.log(qq) 
+    console.log(qq.children) // give html collection of par's childs 
+    console.log(qq.children[2]) // give html collection of par's childs 
+    console.log(qq.children[1].innerHTML);
+
+    console.log(qq.firstElementChild) // give first element
+    console.log(qq.lastElementChild) // give last element
+    console.log(qq.childNodes) // complete tree structure, nodelist, note: only one line break count
+    
+    const div = document.createElement("div")
+    console.log(div)
+    div.id = "one"
+    div.className="two"
+    div.id =Math.round( Math.random()*10 +5)
+    div.setAttribute("titlee", "great") // key and value
+    div.style.backgroundColor = "orange"
+    div.innerText ="hey it's working"
+    const samething = document.createTextNode("hey it's working")
+    div.appendChild(samething)
+
+    ////// to attach on document
+
+    document.body.appendChild(div)
+</script>
 </html>
+
+
+
+
+
 
 <!--console.log(window/document)......(inspect))....window object (details)-->
 <!--console.dir(document(. more info))...... (details)-->
 <!--document.getElementById("firstHeading") -- search any browser page to access-->
-<!--document.getElementById("firstHeading").innerHTML = "<h1>HEY</h1>" -- change on web page-->------------+-+-+-+-+-+-+-+-+-+-+--+++-+-+-+-+-+-+-+
+<!--document.getElementById("firstHeading").innerHTML = "<h1>HEY</h1>" -- change on web page-->

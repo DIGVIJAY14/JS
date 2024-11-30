@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1><center>JAVASCRIPT - DOM</center></h1>
+    <ul class="sport">
+        <li>CRICKET</li>
+    </ul>
+</body>
+<script>
+
+// to add elements in list......
+   function addsports(sptname){
+    const change = document.createElement('li');
+    change.appendChild (document.createTextNode(sptname))
+    document.querySelector('.sport').appendChild(change)
+   }
+   addsports('BADMINTON')
+   addsports('FOOTBALL')
+
+//createTextNode:
+/*Definition: It creates a text node (just the text) that can be added to the DOM separately using methods like appendChild.
+
+Example:
+
+const textNode = document.createTextNode('Hello World!');
+document.querySelector('#example').appendChild(textNode);*/
+
+// to edt an element in list .....
+
+    const edit = document.querySelector("li:nth-child(2)")
+    const change = document.createElement('li')
+    change.textContent = "BASKETBALL"
+    edit.replaceWith(change)
+
+    const edit2 = document.querySelector("li:first-child")
+    edit2.outerHTML = "<li>CRIC</li>"
+
+// remove an element 
+
+   const remve = document.querySelector("li:last-child")
+   remve.remove()
+   
+</script>
+</html>
+

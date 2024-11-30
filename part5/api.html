@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Request APIs</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const url = 'https://api.github.com/users/hiteshchoudhary'
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url)   // to make request
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState); // to check the state changes
+//------------------------------------------------    
+       //  if (xhr.readyState === 4){
+       //     console.log(this.responseText)  // to get the response
+       //  }
+//------------------------------------------------
+     //   if (xhr.readyState === 4){
+     //       const hold = this.responseText
+     //       console.log(hold.followers) // most of the cases data comes in string, to convert it into json(js object)
+     //   }
+//------------------------------------------------
+     if (xhr.readyState === 4){
+           const hold = JSON.parse(this.responseText)
+            console.log(typeof hold) // now it is object
+            console.log(hold.followers)
+     }
+    }
+    xhr.send(); // to sent request
+</script>
+<!--
+-- response text-- 
+
+We use "responseText" to see and access the data that the API sends back. It shows the content (like JSON data, plain text, or HTML) returned by the API.
+-->
+
+<!-- (V8 engine)
+
+V8 is responsible for executing JavaScript code efficiently by converting it into machine code.
+
+V8 works with various Web APIs (like console.log, fetch, etc.) that are provided by the browser or the environment (like Node.js).
+
+V8 executes the JavaScript, but the browser or Node.js environment provides the APIs (like console.log) that you use in your code.
+
+-->
+</html>

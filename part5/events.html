@@ -1,0 +1,74 @@
+<!-- approaches  on clickevent (text, image etc..)
+<script> 
+
+1.1. (onclick)
+document.getElementById('id name').onclick = function(){
+alert("clicked")} 
+
+1.2. (addEventListner)
+document.getElementById(id name).addEventListner('click', function(){
+alert("clicked again")}, false)
+
+document.getElementById(id name).addEventListner('click', function(e){
+console.log(e);
+e.stopPropagation();
+e.preventDefault();
+}, false)
+
+1.3. (to remove element)
+document.querySelector(# id name).addEventListner
+('click', function(e){
+console.log(e.target.parentNode);
+let rem = e.target.parentNode
+rem.remove()})
+
+(to remove element -- with strict checks)
+document.querySelector(# id name).addEventListner
+('click', function(e){
+console.log(e.target.tagName); 
+if(e.target.tagName === 'IMG'){
+   let rem = e.target.parentNode
+rem.remove()})
+
+</script>
+
+*****  1.2. --^^^
+
+- addEventListner provides lots of events that's why we prefer to use this...
+
+- three parameters are there 'event name', function calling, boolean value(false by default)
+
+- Here, 'e' is an event object ..(various events or values, (inspect))
+
+- Event propagation
+
+(bubbling) - In this, the code is run inside to outside , example <ul><li></li></ul>, in this code works first which is inside the list and then works on ul.. 
+
+(capturing) - from outside to inside ( by passing true in third parameter)
+
+To stop this propagation - e.stopPropagation()
+
+- To stop prevent Default
+
+example - clickable image which goes to new page when clicked , but we don't want that it works
+
+e.preventDefault();
+
+*****  1.3. --^^^
+
+- Here, 'e.target' means  , to give complete info of that element
+
+- 'e.target.parentNode' means, it gives complete node, so when we remove  an element then, it completely remove otherwise it removes that particular part..
+
+example - we want to remove 'li' in which image also present , so we have to delete whole li , that's why we use parentnode(in simple words it removes with its parent)
+
+but when we click on list instead of image then it parent become whole ul  and it  removes all...
+
+-----
+
+tagName - it gives the tag and shows it belongs to what, eg:- it shows tagName to image is "IMG"
+
+
+
+
+-->
